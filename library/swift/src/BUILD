@@ -27,9 +27,6 @@ swift_static_framework(
         "UpstreamHttpProtocol.swift",
     ],
     module_name = "Envoy",
-    objc_includes = [
-        "//library/objective-c:EnvoyEngine.h",
-    ],
+    private_deps = ["//library/objective-c:envoy_engine_objc_lib"],
     visibility = ["//visibility:public"],
-    deps = ["//library/objective-c:envoy_engine_objc_lib"],
 )
